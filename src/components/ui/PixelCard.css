@@ -1,0 +1,95 @@
+.pixel-card {
+  --pixel-card-surface:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.015) 55%),
+    rgba(13, 18, 32, 0.72);
+  --pixel-card-edge: rgba(255, 255, 255, 0.1);
+  --pixel-card-edge-active: rgba(96, 165, 250, 0.34);
+  --pixel-card-highlight: rgba(255, 255, 255, 0.14);
+  --pixel-card-shadow:
+    0 24px 48px -24px rgba(0, 0, 0, 0.8),
+    0 8px 18px -10px rgba(0, 0, 0, 0.55);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: 240px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--pixel-card-radius, 24px);
+  background: var(--pixel-card-surface);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: var(--pixel-card-shadow);
+  isolation: isolate;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pixel-card[data-theme='light'] {
+  --pixel-card-surface:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.65) 55%),
+    rgba(241, 245, 249, 0.78);
+  --pixel-card-edge: rgba(15, 23, 42, 0.09);
+  --pixel-card-edge-active: rgba(37, 99, 235, 0.28);
+  --pixel-card-highlight: rgba(255, 255, 255, 1);
+  --pixel-card-shadow:
+    0 24px 48px -26px rgba(15, 23, 42, 0.22),
+    0 8px 18px -12px rgba(15, 23, 42, 0.12);
+}
+
+.pixel-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px var(--pixel-card-edge),
+    inset 0 1px 0 var(--pixel-card-highlight);
+  pointer-events: none;
+  transition: box-shadow 260ms ease;
+}
+
+.pixel-card[data-active]::after {
+  box-shadow:
+    inset 0 0 0 1px var(--pixel-card-edge-active),
+    inset 0 1px 0 var(--pixel-card-highlight);
+}
+
+.pixel-card:focus-visible {
+  box-shadow:
+    var(--pixel-card-shadow),
+    0 0 0 3px rgba(96, 165, 250, 0.45);
+}
+
+.pixel-card-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pixel-card > :not(.pixel-card-canvas) {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .pixel-card {
+    background: var(--color-panel, #0d1220);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+
