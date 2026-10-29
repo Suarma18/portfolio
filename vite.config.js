@@ -11,6 +11,7 @@ export default defineConfig({
     allowedHosts: ['episode-resolved-sanded.ngrok-free.dev'],
   },
   build: {
+    assetsInlineLimit: (filePath) => (filePath.endsWith('.svg') ? true : undefined),
     rollupOptions: {
       output: {
         manualChunks: {

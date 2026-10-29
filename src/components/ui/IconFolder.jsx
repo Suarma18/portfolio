@@ -1,4 +1,15 @@
 import * as React from 'react';
+import codeigniterSvg from '../../assets/icons/codeigniter.svg';
+import phpSvg from '../../assets/icons/php.svg';
+import mysqlSvg from '../../assets/icons/mysql.svg';
+import javascriptSvg from '../../assets/icons/javascript.svg';
+import reactSvg from '../../assets/icons/react.svg';
+import wordpressSvg from '../../assets/icons/wordpress.svg';
+import postmanSvg from '../../assets/icons/postman.svg';
+import adobeIllustratorSvg from '../../assets/icons/adobe-illustrator.svg';
+import adobePhotoshopSvg from '../../assets/icons/adobe-photoshop.svg';
+import adobePremiereSvg from '../../assets/icons/adobe-premiere.svg';
+import adobeAfterEffectsSvg from '../../assets/icons/adobe-after-effects.svg';
 
 /* ------------------------------------------------------------------ */
 /*  Icon Folder — a glass folder with app icons fanned out of it.       */
@@ -47,7 +58,7 @@ export const DEFAULT_ICONS = [
   },
   {
     label: 'After Effects',
-    src: '/adobe-after-effects.svg',
+    src: adobeAfterEffectsSvg,
     background: 'linear-gradient(135deg,#00005B,#000038)',
     imgClassName: 'h-[86%] w-[86%] object-contain',
   },
@@ -57,43 +68,43 @@ export const SKILL_FOLDER_ICONS = {
   web: [
     {
       label: 'CodeIgniter 4',
-      src: '/codeigniter.svg',
+      src: codeigniterSvg,
       background: 'linear-gradient(135deg,#2a1612,#140b09)',
       imgClassName: 'h-[72%] w-[72%] object-contain',
     },
     {
       label: 'PHP',
-      src: '/php.svg',
+      src: phpSvg,
       background: 'linear-gradient(135deg,#252b48,#131728)',
       imgClassName: 'h-[78%] w-[78%] object-contain',
     },
     {
       label: 'MySQL',
-      src: '/mysql.svg',
+      src: mysqlSvg,
       background: 'linear-gradient(135deg,#0f293a,#081722)',
       imgClassName: 'h-[78%] w-[78%] object-contain',
     },
     {
       label: 'JavaScript',
-      src: '/javascript.svg',
+      src: javascriptSvg,
       background: 'linear-gradient(135deg,#f7df1e,#d4b800)',
       imgClassName: 'h-full w-full object-cover',
     },
     {
       label: 'React',
-      src: '/react.svg',
+      src: reactSvg,
       background: 'linear-gradient(135deg,#1d2636,#0c111b)',
       imgClassName: 'h-[72%] w-[72%] object-contain',
     },
     {
       label: 'WordPress',
-      src: '/wordpress.svg',
+      src: wordpressSvg,
       background: 'linear-gradient(135deg,#0d2b38,#071821)',
       imgClassName: 'h-[68%] w-[68%] object-contain',
     },
     {
       label: 'Postman API',
-      src: '/postman.svg',
+      src: postmanSvg,
       background: 'linear-gradient(135deg,#2b1912,#160d0a)',
       imgClassName: 'h-[74%] w-[74%] object-contain',
     },
@@ -101,25 +112,25 @@ export const SKILL_FOLDER_ICONS = {
   design: [
     {
       label: 'Adobe Illustrator',
-      src: '/adobe-illustrator.svg',
+      src: adobeIllustratorSvg,
       background: 'linear-gradient(135deg,#330000,#1c0000)',
       imgClassName: 'h-[88%] w-[88%] object-contain',
     },
     {
       label: 'Photoshop',
-      src: '/adobe-photoshop.svg',
+      src: adobePhotoshopSvg,
       background: 'linear-gradient(135deg,#001E36,#00101f)',
       imgClassName: 'h-[88%] w-[88%] object-contain',
     },
     {
       label: 'Premiere Pro',
-      src: '/adobe-premiere.svg',
+      src: adobePremiereSvg,
       background: 'linear-gradient(135deg,#00005B,#000033)',
       imgClassName: 'h-[88%] w-[88%] object-contain',
     },
     {
       label: 'After Effects',
-      src: '/adobe-after-effects.svg',
+      src: adobeAfterEffectsSvg,
       background: 'linear-gradient(135deg,#00005B,#000033)',
       imgClassName: 'h-[88%] w-[88%] object-contain',
     },
@@ -231,6 +242,8 @@ function Tile({ icon, ring, shadow }) {
         <img
           src={icon.src}
           alt={icon.label || ''}
+          loading="lazy"
+          decoding="async"
           draggable={false}
           className={icon.imgClassName || 'h-[72%] w-[72%] object-contain'}
         />
@@ -489,6 +502,8 @@ export function IconFolder(props) {
                     <img
                       src={icon.src}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
                       className={icon.imgClassName || 'h-[76%] w-[76%] object-contain'}
                     />
                   ) : (
