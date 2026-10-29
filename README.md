@@ -16,7 +16,7 @@ Personal portfolio website for **Putu Suarma Widiada, S.Kom.**, a full-stack web
   - **`ProfileCard`**: 3D tilt-reactive holographic profile card with glare and parallax layers.
   - **`IconFolder`**: Glass skill folders (`Web Development` & `Design & Multimedia`) with fanned SVG app tiles that spread open on scroll, hover, tap, or keyboard interaction and highlight matching skill chips.
   - **`PixelCard` + Toolbox Marquee**: Interactive 2D canvas pixel-wave and cursor-spotlight card wrapping the two-row infinite marquee of daily tools.
-  - **`PrismCarousel`**: 3D perspective carousel with chromatic sweep overlays and keyboard/drag navigation for Enterprise Web Development projects.
+  - **`WebShowcase`**: Apple-grade macOS Studio Viewport with responsive Desktop/Mobile frame switcher, live deployment beacons, full-stack architecture drawer modal, and an interactive 6-project Bento matrix for Enterprise Web Development projects.
   - **`DesignShowcase`**: Interactive Bento Studio Gallery with sub-category filtering, stacked-slide hover fan previews, Canva board integration, and a multi-slide **Glass Lightbox Modal** (keyboard, touch-swipe, and filmstrip navigation) for Design & Multimedia projects.
 - **Bilingual (`EN` / `ID`)**: Instant switching between English and Indonesian with all copy centralized in `src/data/content.jsx`.
 - **Dark & Light Themes**: Persistent theme toggle powered by CSS custom properties and Tailwind CSS v4 tokens.
@@ -25,7 +25,7 @@ Personal portfolio website for **Putu Suarma Widiada, S.Kom.**, a full-stack web
   - **About**: Bio, interests & hobbies, quick facts, and live availability card
   - **Skills & Technologies**: Interactive `IconFolder` cards + `PixelCard` daily toolbox marquee
   - **My Journey**: Tabbed timeline of work/organizational experience (including UPT TIPD, Freelance, and UKM Multimedia ITB STIKOM Bali) and education
-  - **Selected Projects**: Switchable showcase (`PrismCarousel` for Web, `DesignShowcase` for Design & Multimedia)
+  - **Selected Projects**: Switchable showcase (`WebShowcase` for Web, `DesignShowcase` for Design & Multimedia)
   - **Contact**: Validated inquiry form (`mailto:` integration with localized fallback), one-click email copy, and direct WhatsApp/LinkedIn links
 
 ## Tech Stack
@@ -35,7 +35,7 @@ Personal portfolio website for **Putu Suarma Widiada, S.Kom.**, a full-stack web
 | Framework & Build | [React 19](https://react.dev/), [Vite 7](https://vitejs.dev/) |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`), CSS Custom Properties |
 | Motion & Transitions | [Framer Motion 12](https://www.framer.com/motion/) |
-| Interactive Visuals | HTML5 Canvas 2D (`GradientASCII`, `PixelCard`), CSS 3D Transforms & Clip-Path SVG (`ProfileCard`, `IconFolder`, `PrismCarousel`, `DesignShowcase`) |
+| Interactive Visuals | HTML5 Canvas 2D (`GradientASCII`, `PixelCard`), CSS 3D Transforms & Clip-Path SVG (`ProfileCard`, `IconFolder`, `WebShowcase`, `DesignShowcase`) |
 | Icons | Official Brand SVGs (`public/*.svg` & `src/components/toolIcons.jsx`) |
 | Typography | Plus Jakarta Sans, Space Grotesk, JetBrains Mono |
 
@@ -67,12 +67,12 @@ portfolio/
 │   │   │   ├── IconFolder.jsx
 │   │   │   ├── LanguageToggle.jsx
 │   │   │   ├── PixelCard.jsx & PixelCard.css
-│   │   │   ├── PrismCarousel.jsx
 │   │   │   ├── ProfileCard.jsx & ProfileCard.css
 │   │   │   ├── Reveal.jsx
 │   │   │   ├── ScrollProgress.jsx
 │   │   │   ├── SectionHeading.jsx
-│   │   │   └── ThemeToggle.jsx
+│   │   │   ├── ThemeToggle.jsx
+│   │   │   └── WebShowcase.jsx
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Experience.jsx
@@ -132,7 +132,7 @@ All text, experience entries, skills, projects, and contact links live in [`src/
 - **Contact & Profile Metadata**: Edit `meta` for your name, email, phone number, WhatsApp URL, and LinkedIn profile.
 - **Bilingual Copy**: Update `content.en` and `content.id` for each section (`profile`, `about`, `skills`, `journey`, `projects`, `contact`, `footer`).
 - **Skill Folder Icons**: Configure fanned app tiles and SVG paths in [`src/components/ui/IconFolder.jsx`](src/components/ui/IconFolder.jsx).
-- **Projects**: Add or update entries in `projects.items` (`category: 'web'` for `PrismCarousel` or `category: 'design'` for `DesignShowcase`) and place images inside `public/images/projects/`.
+- **Projects**: Add or update entries in `projects.items` (`category: 'web'` for `WebShowcase` or `category: 'design'` for `DesignShowcase`) and place images inside `public/images/projects/`.
 
 ## Author
 

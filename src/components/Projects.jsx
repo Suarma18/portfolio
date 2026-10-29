@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLang } from '../lib/i18n';
 import SectionHeading from './ui/SectionHeading';
-import PrismCarousel from './ui/PrismCarousel';
+import WebShowcase from './ui/WebShowcase';
 import DesignShowcase from './ui/DesignShowcase';
 
 export default function Projects() {
@@ -53,13 +53,13 @@ export default function Projects() {
         <AnimatePresence mode="wait">
           {tab === 'web' ? (
             <motion.div
-              key={`web-carousel-${lang}`}
+              key={`web-showcase-${lang}`}
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              <PrismCarousel items={visible} labels={p.labels} />
+              <WebShowcase items={visible} labels={p.labels} />
             </motion.div>
           ) : (
             <motion.div
