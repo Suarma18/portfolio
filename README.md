@@ -129,7 +129,7 @@ Node.js 18 or later.
 
 All text, experience entries, skills, projects, and contact links live in [`src/data/content.jsx`](src/data/content.jsx):
 
-- **Contact & Profile Metadata**: Edit `meta` for your name, email, phone number, WhatsApp URL, and LinkedIn profile.
+- **Contact & Profile Metadata**: Edit `meta` for your name, email, phone number, WhatsApp URL, LinkedIn, and GitHub profile.
 - **Bilingual Copy**: Update `content.en` and `content.id` for each section (`profile`, `about`, `skills`, `journey`, `projects`, `contact`, `footer`).
 - **Skill Folder Icons**: Configure fanned app tiles and SVG paths in [`src/components/ui/IconFolder.jsx`](src/components/ui/IconFolder.jsx).
 - **Projects**: Add or update entries in `projects.items` (`category: 'web'` for `WebShowcase` or `category: 'design'` for `DesignShowcase`) and place images inside `public/images/projects/`.
@@ -142,6 +142,7 @@ Denpasar, Bali, Indonesia
 - Email: [putusuarmawidiada18@gmail.com](mailto:putusuarmawidiada18@gmail.com)
 - WhatsApp: [+62 813-5322-3507](https://wa.me/6281353223507)
 - LinkedIn: [Putu Suarma Widiada](https://www.linkedin.com/in/putu-suarma-widiada-a395a7264/)
+- GitHub: [Suarma18](https://github.com/Suarma18)
 
 ## License
 

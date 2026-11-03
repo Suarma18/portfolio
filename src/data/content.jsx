@@ -8,6 +8,7 @@ export const meta = {
   phoneDisplay: '0813 5322 3507',
   phoneWa: 'https://wa.me/6281353223507',
   linkedin: 'https://www.linkedin.com/in/putu-suarma-widiada-a395a7264/',
+  github: 'https://github.com/Suarma18',
 };
 
 export const content = {

@@ -1,6 +1,6 @@
 import { useLang } from '../lib/i18n';
 import { meta } from '../data/content';
-import { WhatsAppIcon, MailIcon, LinkedInIcon } from './socialIcons';
+import { WhatsAppIcon, MailIcon, LinkedInIcon, GitHubIcon } from './socialIcons';
 
 export default function Footer() {
   const { t } = useLang();
@@ -23,6 +23,9 @@ export default function Footer() {
         </ul>
 
         <div className="flex items-center gap-3">
+          <a href={meta.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="glass-pill flex h-10 w-10 items-center justify-center rounded-xl text-slate-400 transition duration-200 hover:-translate-y-0.5 hover:border-brand/50 hover:text-brand">
+            <GitHubIcon />
+          </a>
           <a href={meta.phoneWa} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="glass-pill flex h-10 w-10 items-center justify-center rounded-xl text-slate-400 transition duration-200 hover:-translate-y-0.5 hover:border-brand/50 hover:text-brand">
             <WhatsAppIcon />
           </a>

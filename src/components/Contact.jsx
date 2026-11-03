@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLang } from '../lib/i18n';
 import { meta } from '../data/content';
-import { WhatsAppIcon, LinkedInIcon } from './socialIcons';
+import { WhatsAppIcon, LinkedInIcon, GitHubIcon } from './socialIcons';
 import SectionHeading from './ui/SectionHeading';
 import Reveal from './ui/Reveal';
 
@@ -130,6 +130,15 @@ export default function Contact() {
                 >
                   <span className="text-brand"><LinkedInIcon /></span>
                   LinkedIn
+                </a>
+                <a
+                  href={meta.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost inline-flex items-center gap-2.5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white"
+                >
+                  <span className="text-brand"><GitHubIcon /></span>
+                  GitHub
                 </a>
                 <a
                   href={`tel:${meta.phoneDisplay.replace(/\s/g, '')}`}
