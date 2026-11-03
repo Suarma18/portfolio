@@ -27,8 +27,8 @@
 
 :root,
 [data-theme='dark'] {
-  --glass-bg: rgba(18, 23, 38, 0.52);
-  --glass-bg-heavy: rgba(10, 14, 24, 0.74);
+  --glass-bg: rgba(18, 23, 38, 0.6);
+  --glass-bg-heavy: rgba(6, 8, 15, 0.88);
   --glass-bg-subtle: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-border-hover: rgba(59, 130, 246, 0.48);
@@ -63,8 +63,8 @@
   --color-rose-400: #be123c;
   --color-rose-500: #a30f45;
 
-  --glass-bg: rgba(255, 255, 255, 0.62);
-  --glass-bg-heavy: rgba(255, 255, 255, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-heavy: rgba(248, 250, 252, 0.88);
   --glass-bg-subtle: rgba(15, 23, 42, 0.04);
   --glass-border: rgba(15, 23, 42, 0.1);
   --glass-border-hover: rgba(37, 99, 235, 0.42);
